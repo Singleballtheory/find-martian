@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 $(document).ready(function() {
-  $('#weatherLocation').click(function() {
-    const city = $('#location').val();
-    $('#location').val("");
+  $('#selectDate').click(function() {
+    const date = $('#date').val();
+    $('#date').val("");
 
     let request = new XMLHttpRequest();
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
+    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&camera=navcam&page=1&api_key=${process.env.API_KEY}`;
 
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
@@ -22,8 +22,7 @@ $(document).ready(function() {
     request.send();
 
     function getElements(response) {
-      $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
-      $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp} degrees.`);
+      $('.showImages').html(`This ${date} brings up <img src="${response.photos[0].img_src}">`);
     }
   });
 });

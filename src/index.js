@@ -6,7 +6,6 @@ import './css/styles.css';
 $(document).ready(function() {
   $('#selectDate').click(function() {
     const date = $('#date').val();
-    $('#date').val("");
 
     let request = new XMLHttpRequest();
     const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&camera=navcam&page=1&api_key=${process.env.API_KEY}`;
@@ -22,7 +21,12 @@ $(document).ready(function() {
     request.send();
 
     function getElements(response) {
-      $('.showImages').html(`This ${date} brings up <img src="${response.photos[0].img_src}">`);
+      let imageHTML = "";
+      for (let i=0; i < response.photos.length; i++) {
+        imageHTML += "<img src=" + response.photos[i].img_src + ">"
+      }
+      
+      $('.showImages').html(imageHTML);
     }
   });
 });

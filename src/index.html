@@ -6,8 +6,12 @@
   <div class="container">
     <h1>Find Sasquatch!</h1>
     <label for="date">Enter yyyy-mm-dd:</label>
-    <input id="date" type="text">
-    <button class="btn-success" id="selectDate">Search rover images</button>
+    <div class="form-group row">
+      <div class="col-xs-2">
+        <input id="date" class="form-control" type="date">
+        <button class="btn-success" id="selectDate">Search rover images</button>
+      </div>
+    </div>
     <div class="showImages"></div>
   </div>
 </body>

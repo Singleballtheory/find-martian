@@ -4,6 +4,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 $(document).ready(function() {
+  $(".viewProof").click(function() {
+    $(".showBackstory").show();
+  })
+
+  $(".newLocation").click(function() {
+    $(".showBackstory").hide();
+    $(".showRocks").show();
+  })
+
+  $(".curiosityFollowed").click(function() {
+    $(".showRocks").hide();
+    $(".showFootprints").show();
+  })
+
+  $(".Bigfoot").click(function() {
+    $(".showFootprints").hide();
+    $(".showBigfoot").show();
+  })
+
+
   $('#selectDate').click(function() {
     const date = $('#date').val();
 

@@ -10,26 +10,65 @@ body {
   color: antiquewhite;
 }
 
-.showBackstory {
-  /* display: none; */
+.viewProof:hover, .newLocation:hover, .curiosityFollowed, .Bigfoot:hover {
+  cursor: pointer;
 }
 
-#showImages img {
-  width: 350px;
-  padding: 100px;
-  margin: 100px;
-  float: left;
+.showBackstory {
+  display: none;
+  color: antiquewhite;
 }
 
 img {
+  width: 350px;
+  padding: 1px;
+  float: left;
+}
+
+/* img {
   width: 200px;
   height: auto;
+} */
+
+.showBackstory p {
+  background-color: gray;
+}
+
+.showRocks p {
+  background-color: gray;
+}
+
+.showFootprints p {
+  background-color: gray;
+}
+
+.showBigfoot p {
+  background-color: gray;
 }
 
 .showRocks {
   display: none;
+  color: antiquewhite;
+}
+
+.showFootprints {
+  display: none;
+  color: antiquewhite;
+}
+
+.showBigfoot {
+  display: none;
+  color: antiquewhite;
 }
 
 .noImages {
   display: none;
+}
+
+#card {
+  background: rgba(255, 122, 89 .5);
+}
+
+.bigfoot img {
+  width: 300px;
 }

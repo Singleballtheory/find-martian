@@ -22,10 +22,14 @@ $(document).ready(function() {
 
     function getElements(response) {
       let imageHTML = "";
-      for (let i=0; i < response.photos.length; i++) {
+      for (let i=0; i < 12; i++) {
         imageHTML += "<img src=" + response.photos[i].img_src + ">"
       }
-      
+      if (imageHTML === "") {
+        $('.noImages').text("No images taken.").show();
+      } else {
+        $('.noImages').hide();
+      }
       $('.showImages').html(imageHTML);
     }
   });

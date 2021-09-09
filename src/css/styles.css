@@ -1,3 +1,35 @@
 body {
-  background-color: lightblue;
+  background-color: rgb(206, 225, 233);
+  background-image: url(https://mars.nasa.gov/system/resources/detail_files/7857_mars-curiosity-rover-self-portrait-looking-back-pia20603-full2.jpg);
+  background-size: cover;
+}
+
+.jumbotron {
+  background-image: url(https://www.nasa.gov/sites/default/files/thumbnails/image/pia22313.jpg);
+  background-size: cover;
+  color: antiquewhite;
+}
+
+.showBackstory {
+  /* display: none; */
+}
+
+#showImages img {
+  width: 350px;
+  padding: 100px;
+  margin: 100px;
+  float: left;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+.showRocks {
+  display: none;
+}
+
+.noImages {
+  display: none;
 }

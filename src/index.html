@@ -4,14 +4,54 @@
 </head>
 <body>
   <div class="container">
-    <h1>Find Sasquatch!</h1>
-    <label for="date">Enter yyyy-mm-dd:</label>
+    <div class="jumbotron">
+      <h1>Redfoot: Sasquatch on Mars</h1>
+      <p>On November 26th, 2011, and after decades of failed study by Earth's most renowned scientific minds, <br>NASA launched the Curiosity rover to Mars for one expressed purpose:<br><br>To find Sasquatch.<br><br>After nine active years and billions of dollars invested, we here at NASA have reason to believe <br>Sasquatch has in fact been found. On Mars. Just walking around. <br><br>View our proof here.<br><br>Or if you prefer, bring up any date in the field below to view images taken by the Curiosity rover <br>and discover Sasquatch for yourself.</p>
+    </div>
+
+    <div class="showBackstory">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-fluid" id="rover" src="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00123/opgs/edr/fcam/FLA_408419964EDR_F0051070FHAZ00304M_.JPG" alt="">
+          </div>
+          <div class="col-md-4">
+            <p>Our search began in earnest shortly after Curiosity landed within Gale crater on November 26, 2011. Experts agreed this could be a likely landing location of a Sasquatch were they to have built their own space ship and travelled to Mars. Images of the area however proved unfruitful. After two years' time it was deemed a good idea to send Curiosity to a new location.</p>
+          </div>
+          <div class="col-md-4">
+            <img id="rover2" class="img-fluid" src="https://mars.nasa.gov/msl-raw-images/msss/00123/mcam/0123ML0007700050103908E01_DXXX.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="showRocks">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-fluid" id="rover" src="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00123/opgs/edr/fcam/FLA_408419964EDR_F0051070FHAZ00304M_.JPG" alt="">
+          </div>
+          <div class="col-md-4">
+            <p>Our search began in earnest shortly after Curiosity landed within Gale crater on November 26, 2011. Experts agreed this could be a likely landing location of a Sasquatch were they to have built their own space ship and travelled to Mars. Images of the area however proved unfruitful. (images from first two years of Curiosity) After two years' time it was deemed a good idea to send Curiosity to a new location.</p>
+          </div>
+          <div class="col-md-4">
+            <img id="rover2" class="img-fluid" src="https://mars.nasa.gov/msl-raw-images/msss/00123/mcam/0123ML0007700050103908E01_DXXX.jpg" alt="">
+          </div>
+        </div>
+      </div>      
+    </div>
+    <div class="showFootprints">
+
+    </div>
+    
     <div class="form-group row">
       <div class="col-xs-2">
+        <label for="date">Enter date:</label>
         <input id="date" class="form-control" type="date">
+        <br>
         <button class="btn-success" id="selectDate">Search rover images</button>
       </div>
     </div>
+    <div class="noImages"></div>
     <div class="showImages"></div>
   </div>
 </body>
